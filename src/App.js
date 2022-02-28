@@ -23,11 +23,10 @@ function App() {
     );
     const data = await response.json();
     setDogImg(data.message);
-    console.log(dogImg);
   };
   return (
     <div className="container">
-      <div className="select-div">
+      <div>
         <List breedsList={breedsList} handleClick={getBreedImage} />
       </div>
       <div className={dogImg ? "img-div" : "hidden"}>

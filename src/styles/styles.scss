@@ -10,8 +10,7 @@ $clrPrimary: brown;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -19,15 +18,10 @@ $clrPrimary: brown;
   height: 100vh;
   background-image: url("/src/paws.jpg");
   background-size: cover;
-  .hidden {
-    margin-top: 2em;
-    height: 30em;
-    width: 45em;
-  }
+  .hidden,
   img {
     margin-top: 2em;
     height: 30em;
-    // width: 45em;
   }
   .select {
     @include flexCenter(column);
@@ -49,9 +43,6 @@ $clrPrimary: brown;
       color: $clrPrimary;
       font-weight: bold;
       margin: 1em;
-    }
-    option {
-      cursor: pointer;
     }
   }
 }

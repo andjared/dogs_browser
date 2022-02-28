@@ -10,7 +10,11 @@ export default function List({ breedsList, handleClick }) {
         onClick={(e) => handleClick(e.target.value)}
       >
         {breedsList &&
-          breedsList.map((breed) => <option key={breed}>{breed}</option>)}
+          breedsList.map((breed) => (
+            <option key={breed} className="options">
+              {breed}
+            </option>
+          ))}
       </select>
     </div>
   );
