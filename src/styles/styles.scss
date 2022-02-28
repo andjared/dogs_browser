@@ -1,3 +1,5 @@
+$clrPrimary: brown;
+
 @mixin flexCenter($direction) {
   display: flex;
   justify-content: center;
@@ -12,13 +14,13 @@
 
   label {
     font-size: 2em;
-    color: brown;
+    color: $clrPrimary;
     font-weight: bold;
     margin: 1em;
   }
   option {
     text-transform: capitalize;
     font-size: 1em;
-    color: brown;
+    color: $clrPrimary;
   }
 }
