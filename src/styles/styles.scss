@@ -6,21 +6,51 @@ $clrPrimary: brown;
   align-items: center;
   flex-direction: $direction;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .container {
   @include flexCenter(column);
-}
-.select {
-  @include flexCenter(column);
-
-  label {
-    font-size: 2em;
-    color: $clrPrimary;
-    font-weight: bold;
-    margin: 1em;
+  height: 100vh;
+  background-image: url("/src/paws.jpg");
+  background-size: cover;
+  .hidden {
+    margin-top: 2em;
+    height: 30em;
+    width: 45em;
   }
-  option {
-    text-transform: capitalize;
-    font-size: 1em;
-    color: $clrPrimary;
+  img {
+    margin-top: 2em;
+    height: 30em;
+    // width: 45em;
+  }
+  .select-div {
+    // @include flexCenter(column);
+    .select {
+      @include flexCenter(column);
+    }
+    select#breeds {
+      color: $clrPrimary;
+      padding: 0.5em;
+      font-size: 1.5em;
+      font-weight: bold;
+      text-transform: capitalize;
+      cursor: pointer;
+      &:hover {
+        background-color: rgba(255, 179, 0, 0.739);
+      }
+    }
+    label {
+      font-size: 3em;
+      color: $clrPrimary;
+      font-weight: bold;
+      margin: 1em;
+    }
+    option {
+      cursor: pointer;
+    }
   }
 }

@@ -27,8 +27,12 @@ function App() {
   };
   return (
     <div className="container">
-      <List breedsList={breedsList} handleClick={getBreedImage} />
-      {dogImg && <img alt="dogImg" src={dogImg}></img>}
+      <div className="select-div">
+        <List breedsList={breedsList} handleClick={getBreedImage} />
+      </div>
+      <div className={dogImg ? "img-div" : "hidden"}>
+        {dogImg && <img alt="dogImg" src={dogImg}></img>}
+      </div>
     </div>
   );
 }
